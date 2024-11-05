@@ -4,10 +4,10 @@ import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
 
 @SpringBootApplication
-public class KonacommerceApplication {
+public class KonaCommerce {
 
     public static void main(String[] args) {
-        SpringApplication.run(KonacommerceApplication.class, args);
+        SpringApplication.run(KonaCommerce.class, args);
     }
 
 }
