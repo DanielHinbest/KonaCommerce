@@ -1,7 +1,7 @@
 
 # KonaCommerce
 
-KonaCommerce is a web-based e-commerce platform built with Java and Kotlin, leveraging the power of Spring Boot for backend services and the flexibility of Kotlin for data models and frontend templating. This project is designed to provide a robust, scalable foundation for online retail businesses with RESTful APIs, server-side rendering, and a layered architecture.
+KonaCommerce is a web-based e-commerce platform built with Kotlin, leveraging the power of Spring Boot for backend services and the flexibility of Kotlin for data models and frontend templating. This project is designed to provide a robust, scalable foundation for online retail businesses with RESTful APIs, server-side rendering, and a layered architecture.
 
 ---
 
@@ -15,26 +15,26 @@ KonaCommerce is a web-based e-commerce platform built with Java and Kotlin, leve
 
 ## Tech Stack
 
-| Component              | Technology         |
-|------------------------|--------------------|
-| Backend                | Java (Spring Boot) |
+| Component              | Technology                 |
+|------------------------|----------------------------|
+| Backend                | Kotlin (Spring Boot)       |
 | Data Layer             | Kotlin (Data classes, JPA) |
-| Frontend Templating    | Kotlin (Ktor) or Java (Thymeleaf) |
-| Database               | PostgreSQL / MySQL |
-| Testing                | JUnit 5, Mockito   |
+| Frontend Templating    | Kotlin (Ktor)              |
+| Database               | PostgreSQL / MySQL         |
+| Testing                | JUnit 5, Mockito           |
 
 ## Setup and Installation
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/your-username/konacommerce.git
+   git clone https://github.com/DanielHinbest/konacommerce.git
    cd konacommerce
    ```
 
 2. **Set up the database:**
     - Ensure PostgreSQL (or MySQL) is installed and running.
     - Create a new database for the project.
-    - Update the database connection settings in `application.properties`.
+    - Update the database connection settings in `application.yml`.
 
 3. **Run the application:**
    ```bash

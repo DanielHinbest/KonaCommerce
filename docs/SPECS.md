@@ -1,7 +1,7 @@
 
 # KonaCommerce
 
-**KonaCommerce** is a web-based e-commerce platform built using a hybrid approach with both Java and Kotlin. This setup allows us to leverage Java's stability and enterprise capabilities for backend services while taking advantage of Kotlin's conciseness and modern features.
+**KonaCommerce** is a web-based e-commerce platform built using a hybrid approach with both Kotlin. 
 
 ---
 
@@ -15,11 +15,11 @@ The KonaCommerce application is divided into the following layers:
 
 ## Technology Stack
 
-| Layer                 | Language & Framework  |
-|-----------------------|-----------------------|
-| **Backend API**       | Java (Spring Boot)    |
-| **Data Models**       | Kotlin (Data classes) |
-| **Frontend**          | Kotlin (Ktor) or Java (Thymeleaf) |
+| Layer                 | Language & Framework      |
+|-----------------------|---------------------------|
+| **Backend API**       | Kotlin (Spring Boot)      |
+| **Data Models**       | Kotlin (Data classes)     |
+| **Frontend**          | Kotlin (Ktor)             |
 | **Unit Testing**      | Kotlin (JUnit 5, Mockito) |
 
 ---
@@ -28,9 +28,8 @@ The KonaCommerce application is divided into the following layers:
 
 ### 1. Backend API (Business Logic and Services)
 
-**Use: Java with Spring Boot**
+**Use: Kotlin with Spring Boot**
 
-- **Why Java:** Java is ideal for backend development in web applications due to its maturity, extensive library support, and enterprise-grade frameworks like Spring Boot.
 - **Core Components:**
     - **Spring Boot Framework:** Simplifies configuration and dependency management.
     - **Layered Structure:**
@@ -38,30 +37,26 @@ The KonaCommerce application is divided into the following layers:
         - **Service Layer:** Contains the core business logic.
         - **Repository Layer:** Interfaces with the database.
 
-```java
-// Example of a ProductController in Java
+```kotlin
+// Example of a ProductController in Kotlin
 @RestController
 @RequestMapping("/api/products")
-public class ProductController {
-    private final ProductService productService;
-
-    @Autowired
-    public ProductController(ProductService productService) {
-        this.productService = productService;
-    }
+class ProductController @Autowired constructor(
+    private val productService: ProductService
+) {
 
     @GetMapping
-    public List<Product> getAllProducts() {
-        return productService.getAllProducts();
+    fun getAllProducts(): List<Product> {
+        return productService.getAllProducts()
     }
 }
 ```
 
 ### 2. Data Layer (Persistence and Database Operations)
 
-**Use: Java for persistence, Kotlin for data models**
+**Use: Kotline for persistence and data models**
 
-- **Why Java for Persistence:** Java integrates well with Spring Data JPA and Hibernate, making database operations smooth and efficient.
+- **Why Kotlin for Persistence:** Kotlin integrates well with Spring Data JPA and Hibernate, making database operations smooth and efficient.
 - **Why Kotlin for Data Models:** Kotlin’s data classes reduce boilerplate code and include null safety features for robust data handling.
 
 ```kotlin
@@ -83,10 +78,9 @@ data class Product(
 
 ### 3. Frontend (View Layer and Template Rendering)
 
-**Use: Kotlin (Ktor) for templating, or Java (Thymeleaf)**
+**Use: Kotlin (Ktor) for templating**
 
 - **Why Kotlin with Ktor:** Kotlin’s syntax is concise and readable, making it well-suited for frontend templating and dynamic content handling.
-- **Alternative with Java:** If you prefer Spring MVC’s templating, use **Thymeleaf** for traditional server-side rendering.
 
 ```kotlin
 // Example route using Ktor for templating in Kotlin
@@ -107,7 +101,7 @@ fun Application.module() {
 **Use: Kotlin**
 
 - **Why Kotlin for Testing:** Kotlin’s concise syntax and support for lambda expressions make tests shorter, more readable, and maintainable.
-- **Testing Tools:** JUnit 5 and Mockito are compatible with both Java and Kotlin for unit tests, while Spring Test and Ktor’s Test Engine enable integration testing.
+- **Testing Tools:** JUnit 5 and Mockito are compatible with Kotlin for unit tests, while Spring Test and Ktor’s Test Engine enable integration testing.
 
 ```kotlin
 // Example test case in Kotlin
@@ -130,15 +124,6 @@ class ProductServiceTest {
     }
 }
 ```
-
----
-
-## Summary of When to Use Each Language
-
-- **Java:** Use Java for the core backend API and persistence layer, especially for the main business logic and security configurations via Spring Boot.
-- **Kotlin:** Use Kotlin for data models, frontend templating (Ktor), and testing, where its concise syntax and null safety are advantageous.
-
----
 
 ## Installation and Setup
 
