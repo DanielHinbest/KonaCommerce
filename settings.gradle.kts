@@ -1,1 +1,1 @@
-rootProject.name = "konacommerce"
+rootProject.name = "KonaCommerce"

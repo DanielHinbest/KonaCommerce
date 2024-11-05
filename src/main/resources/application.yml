@@ -1,0 +1,15 @@
+# src/main/resources/application.yml
+spring:
+  application:
+    name: konacommerce
+  datasource:
+    url: jdbc:postgresql://localhost:5432/konacommerce
+    username: hinbestd
+    password: Curling2024
+    driver-class-name: org.postgresql.Driver
+  jpa:
+    hibernate:
+      ddl-auto: update
+    show-sql: true
+    properties:
+      dialect: org.hibernate.dialect.PostgreSQLDialect
