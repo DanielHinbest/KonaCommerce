@@ -3,6 +3,21 @@ package ca.hinbest.daniel.konacommerce.model
 import jakarta.persistence.*
 import java.time.LocalDateTime
 
+/**
+ * Represents a user in the system.
+ *
+ * @author Daniel Hinbest
+ * @since 1.0
+ * @date 2023-10-05
+ * @property userId The unique identifier for the user.
+ * @property username The username of the user.
+ * @property email The email address of the user.
+ * @property passwordHash The hashed password of the user.
+ * @property createdAt The timestamp when the user was created.
+ * @property lastLogin The timestamp of the user's last login.
+ * @property role The role assigned to the user.
+ * @constructor Creates a new user with the specified properties.
+ */
 @Entity
 @Table(name = "Users")
 data class User(
