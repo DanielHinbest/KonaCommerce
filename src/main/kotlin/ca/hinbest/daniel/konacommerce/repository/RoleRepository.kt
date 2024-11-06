@@ -1,10 +1,10 @@
 package ca.hinbest.daniel.konacommerce.repository
 
-import ca.hinbest.daniel.konacommerce.model.User
+import ca.hinbest.daniel.konacommerce.model.Role
 import org.springframework.data.jpa.repository.JpaRepository
 import org.springframework.stereotype.Repository
 
 @Repository
-interface UserRepository : JpaRepository<User, Long> {
-    fun findByEmail(email: String): User?
+interface RoleRepository : JpaRepository<Role, Long> {
+    fun findByRoleName(roleName: String): Role?
 }
