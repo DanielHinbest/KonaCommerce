@@ -15,7 +15,7 @@ import java.math.BigDecimal
  *
  * @author Daniel Hinbest
  * @since 1.0
- * @date 2023-10-06
+ * @date 2023-11-06
  * @property productId The unique identifier for the product.
  * @property title The title of the product.
  * @property price The price of the product.
@@ -40,5 +40,13 @@ data class Product(
     var stockQuantity: Int = 0,
 
     @Column(name = "description", nullable = false)
-    var description: String = ""
+    var description: String = "",
+
+    @ManyToMany
+    @JoinTable(
+        name = "Product_Platforms",
+        joinColumns = [JoinColumn(name = "product_id")],
+        inverseJoinColumns = [JoinColumn(name = "platform_id")]
+    )
+    var platforms: MutableSet<Platform> = mutableSetOf()
 )

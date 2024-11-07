@@ -8,7 +8,7 @@ import java.time.LocalDateTime
  *
  * @author Daniel Hinbest
  * @since 1.0
- * @date 2023-10-05
+ * @date 2023-11-06
  * @property userId The unique identifier for the user.
  * @property username The username of the user.
  * @property email The email address of the user.
