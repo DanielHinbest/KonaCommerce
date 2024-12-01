@@ -18,7 +18,7 @@ import java.math.BigDecimal
  */
 @Entity
 @Table(name = "Order_Items")
-data class OrderItems(
+data class OrderItem(
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "order_item_id")

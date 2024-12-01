@@ -1,4 +1,4 @@
 package ca.hinbest.daniel.konacommerce.controller
 
-class OrderControllerTests {
+class OrderControllerTest {
 }

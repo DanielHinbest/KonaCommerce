@@ -9,7 +9,7 @@ import org.springframework.stereotype.Repository
  *
  * @author Daniel Hinbest
  * @since 1.0
- * @date 2023-10-05
+ * @date 2024-10-05
  */
 @Repository
 interface UserRepository : JpaRepository<User, Long> {

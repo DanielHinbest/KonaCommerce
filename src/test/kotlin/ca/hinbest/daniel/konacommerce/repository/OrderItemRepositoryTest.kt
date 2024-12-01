@@ -1,4 +1,4 @@
 package ca.hinbest.daniel.konacommerce.repository
 
-class UserRepositoryTest {
+class OrderItemRepositoryTest {
 }
